@@ -1,0 +1,63 @@
+* {
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.main-page {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  text-align: center;
+  font-family: DejaVu Sans Mono, monospace
+}
+
+.center-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 1300px;
+  background: lavender;
+}
+
+.side-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  width: 200px;
+  background: thistle;
+}
+
+.icon {
+  font-size: 40px;
+  margin-top: -300px;
+}
+
+.name {
+  margin-top: -900px;
+  font-size: 30px;
+}
+
+.score-count {
+  margin-top: -900px;
+  font-size: 24px;
+}
+
+.game-title {
+  font-size: 44px;
+  margin-top: 60px;
+}
+
+.choose-text {
+  font-size: 28px;
+  margin-top: 60px;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  height: 120px;
+  font-size: 100px;
+  padding-top: 200px;
+}
