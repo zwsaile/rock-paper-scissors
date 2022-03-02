@@ -1,7 +1,7 @@
 * {
   padding: 0px;
   margin: 0px;
-
+  border-radius: 7px;
 }
 
 .main-page {
@@ -15,7 +15,7 @@
 .center-section {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  align-items: center;
   width: 1300px;
   background: lavender;
 }
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100vh;
+  align-items: center;
   width: 200px;
   background: thistle;
 }
@@ -32,32 +32,53 @@
 .icon {
   font-size: 40px;
   margin-top: -300px;
+  background-color: #c297c2;
+  width: 50px;
 }
 
 .name {
   margin-top: -900px;
   font-size: 30px;
+  background-color: #c297c2;
+  width: 120px;
 }
 
 .score-count {
   margin-top: -900px;
   font-size: 24px;
+  background-color: #c297c2;
+  width: 130px;
 }
 
 .game-title {
   font-size: 44px;
   margin-top: 60px;
+  background-color: #c297c2;
+  width: 600px;
 }
 
 .choose-text {
   font-size: 28px;
   margin-top: 60px;
+  width: 270px;
+  background-color: #c297c2;
 }
 
 .choices {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 120px;
+  width: 700px;
   font-size: 100px;
   padding-top: 200px;
+}
+
+section.choices > p {
+  width: 130px;
+  height: 130px;
+  background-color: thistle;
+}
+
+section.choices > p:hover {
+  background-color: #c297c2;
 }

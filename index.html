@@ -10,9 +10,9 @@
   <body>
     <main class="main-page">
       <section class="side-section">
-        <h1 class="icon">🧍</h1>
-        <h2 class="name">Zach</h2>
-        <p class="score-count">Wins: 0</p>
+        <h1 id="human-icon" class="icon"></h1>
+        <h2 id="human-name" class="name"></h2>
+        <p id="human-score" class="score-count"></p>
       </section>
       <section class="center-section">
         <h1 class="game-title">Rock, Paper, Scissors</h1>
@@ -24,13 +24,15 @@
         </section>
       </section>
       <section class="side-section">
-        <h1 class="icon">👾</h1>
-        <h2 class="name">AI</h2>
-        <p class="score-count">Wins: 0</p>
+        <h1 id="comp-icon" class="icon"></h1>
+        <h2 id="comp-name" class="name"></h2>
+        <p id="comp-score" class="score-count"></p>
       </section>
     </main>
+    <main class="results-page hidden">
+    </main>
+  </body>
   <script src="player.js"></script>
   <script src="game.js"></script>
-	<script src="main.js"></script>
-  </body>
+  <script src="main.js"></script>
 </html>
