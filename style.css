@@ -65,6 +65,11 @@ label {
   margin: 10px;
 }
 
+a {
+  margin-top: 30px;
+  padding-left: 10px;
+}
+
 .submit-button {
   background-color: thistle;
   font-size: 28px;
@@ -92,7 +97,7 @@ label {
   font-family: DejaVu Sans Mono, monospace
 }
 
-.center-section {
+.normal-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,6 +126,16 @@ label {
   margin-top: 60px;
   background-color: #c297c2;
   width: 270px;
+}
+
+/* Hard Mode Layout */
+
+.hard-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1300px;
+  background: lavender;
 }
 
 /* Results Page Layout */

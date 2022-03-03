@@ -10,10 +10,13 @@ var normalCheck = document.getElementById("normal");
 var hardCheck = document.getElementById("hard");
 
 //Game Pieces
-var choiceBox = document.querySelector(".choices");
+var choiceBoxNormal = document.getElementById("normal-choices");
+var choiceBoxHard = document.getElementById("hard-choices");
 var rockButton = document.querySelector(".rock");
 var paperButton = document.querySelector(".paper");
 var scissorsButton = document.querySelector(".scissors");
+var lizardButton = document.querySelector(".lizard");
+var spockButton = document.querySelector(".spock");
 
 //Human Data
 var humanIcon = document.getElementById("human-icon");
@@ -27,7 +30,8 @@ var compScore = document.getElementById("comp-score");
 
 //Page Views
 var loginPage = document.querySelector(".login-page")
-var normalPage = document.querySelector(".center-section");
+var normalPage = document.querySelector(".normal-page");
+var hardPage = document.querySelector(".hard-page");
 var resultsPage = document.querySelector(".results-page");
 
 // Results Page
@@ -37,11 +41,18 @@ var resultsText = document.querySelector(".result-text");
 
 // EVENT LISTENERS
 
-choiceBox.addEventListener("click", function() {
-  currentGame.players[0].takeTurn(event);
+choiceBoxNormal.addEventListener("click", function() {
+  currentGame.players[0].takeTurnNormal(event);
   currentGame.players[0].calculateScore();
-  currentGame.seeResults();
-  currentGame.returnHome();
+  currentGame.seeResults(normalPage);
+  currentGame.returnHome(normalPage);
+});
+
+choiceBoxHard.addEventListener("click", function() {
+  currentGame.players[0].takeTurnHard(event);
+  currentGame.players[0].calculateScore();
+  currentGame.seeResults(hardPage);
+  currentGame.returnHome(hardPage);
 });
 
 normalCheck.addEventListener("click", function() {
@@ -52,14 +63,17 @@ hardCheck.addEventListener("click", function() {
   hardCheck.classList.toggle("checked")
 });
 
-letsPlay.addEventListener("click", loginNormal);
+letsPlay.addEventListener("click", function() {
+  loginNormal();
+  loginHard();
+});
 
 window.addEventListener("load", renderPlayerData);
 
 // FUNCTIONS
 
-function getRandomItem() {
-  return Math.floor(Math.random() * 3);
+function getRandomItem(items) {
+  return Math.floor(Math.random() * items);
 };
 
 function loginNormal() {
@@ -74,7 +88,7 @@ function loginHard() {
   if (hardCheck.className === "checked") {
     humanName.innerText = nameValue.value;
     switchViews(loginPage)
-    switchViews(normalPage)
+    switchViews(hardPage)
   };
 };
 
