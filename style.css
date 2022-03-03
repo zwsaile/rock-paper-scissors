@@ -127,6 +127,10 @@ section.choices > p {
   width: 130px;
   height: 130px;
   background-color: thistle;
+  box-shadow:
+    -2px 2px 10px rgba(176, 168, 189),
+    2px -2px 10px rgba(176, 168, 189),
+    0px 0px 20px rgba(176, 168, 189);
 }
 
 section.choices > p:hover {
