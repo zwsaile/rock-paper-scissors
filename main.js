@@ -2,6 +2,13 @@ var currentGame = new Game;
 
 // QUERY SELECTORS AND GET ELEMENTS
 
+// Login page
+
+var letsPlay = document.querySelector(".submit-button");
+var nameValue = document.getElementById("name");
+var normalCheck = document.getElementById("normal");
+var hardCheck = document.getElementById("hard");
+
 //Game Pieces
 var choiceBox = document.querySelector(".choices");
 var rockButton = document.querySelector(".rock");
@@ -19,10 +26,11 @@ var compName = document.getElementById("comp-name");
 var compScore = document.getElementById("comp-score");
 
 //Page Views
-var choosePage = document.querySelector(".center-section");
+var loginPage = document.querySelector(".login-page")
+var normalPage = document.querySelector(".center-section");
 var resultsPage = document.querySelector(".results-page");
 
-// Player choices
+// Results Page
 var humanChoice = document.getElementById("human-choice");
 var compChoice = document.getElementById("comp-choice");
 var resultsText = document.querySelector(".result-text");
@@ -36,11 +44,38 @@ choiceBox.addEventListener("click", function() {
   currentGame.returnHome();
 });
 
+normalCheck.addEventListener("click", function() {
+  normalCheck.classList.toggle("checked")
+});
+
+hardCheck.addEventListener("click", function() {
+  hardCheck.classList.toggle("checked")
+});
+
+letsPlay.addEventListener("click", loginNormal);
+
 window.addEventListener("load", renderPlayerData);
 
-// Functions
+// FUNCTIONS
+
 function getRandomItem() {
   return Math.floor(Math.random() * 3);
+};
+
+function loginNormal() {
+  if (normalCheck.className === "checked") {
+    humanName.innerText = nameValue.value;
+    switchViews(loginPage)
+    switchViews(normalPage)
+  };
+};
+
+function loginHard() {
+  if (hardCheck.className === "checked") {
+    humanName.innerText = nameValue.value;
+    switchViews(loginPage)
+    switchViews(normalPage)
+  };
 };
 
 function renderScore() {
