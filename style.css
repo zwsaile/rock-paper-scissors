@@ -5,6 +5,83 @@
   /* border: solid 0.5px black; */
 }
 
+/* Login Page Layout */
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lavender;
+  height: 100vh;
+  width: 1250px;
+}
+
+.login-title {
+  font-size: 44px;
+  margin-top: 60px;
+  background-color: #c297c2;
+  width: 600px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.form-name {
+  align-items: center;
+  height: 100px;
+}
+
+.form-difficulty {
+  height: 60px;
+}
+
+#name {
+  background-color: thistle;
+  font-size: 18px;
+  font-family: inherit;
+  height: 20px;
+  width: 300px;
+  padding: 8px;
+  margin: 10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #c297c2;
+}
+
+#hard {
+  margin-left: 22px;
+}
+
+label {
+  background-color: thistle;
+  font-size: 20px;
+  padding: 8px;
+  margin: 10px;
+}
+
+.submit-button {
+  background-color: thistle;
+  font-size: 28px;
+  height: 40px;
+  width: 250px;
+  margin-left: 150px;
+  padding-top: 10px;
+  box-shadow:
+    -2px 2px 8px rgba(176, 168, 189),
+    2px -2px 8px rgba(176, 168, 189),
+    0px 0px 16px rgba(176, 168, 189);
+}
+
+.submit-button:hover {
+  background-color: #c297c2;
+}
+
 /* Main Page Layout */
 
 .main-page {
@@ -102,7 +179,7 @@
   margin-top: -900px;
   font-size: 30px;
   background-color: #c297c2;
-  width: 120px;
+  width: 150px;
 }
 
 .score-count {

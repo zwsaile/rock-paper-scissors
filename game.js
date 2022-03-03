@@ -50,13 +50,13 @@ class Game {
 
   seeResults() {
     this.convertResults();
-    switchViews(choosePage);
+    switchViews(normalPage);
     switchViews(resultsPage);
     renderChoices();
   };
 
   returnHome() {
-    setTimeout(switchViews, 3*1000, choosePage);
+    setTimeout(switchViews, 3*1000, normalPage);
     setTimeout(switchViews, 3*1000, resultsPage);
   };
 
