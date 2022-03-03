@@ -16,6 +16,9 @@ class Player {
       } else if (newCompPick === 2) {
         currentGame.playerChoices[1] = "scissors";
       };
+  };
+
+  calculateScore() {
     currentGame.countHumanWin();
     currentGame.countCompWin();
   };

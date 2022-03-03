@@ -2,7 +2,10 @@
   padding: 0px;
   margin: 0px;
   border-radius: 7px;
+  /* border: solid 0.5px black; */
 }
+
+/* Main Page Layout */
 
 .main-page {
   display: flex;
@@ -29,6 +32,65 @@
   background: thistle;
 }
 
+.game-title {
+  font-size: 44px;
+  margin-top: 60px;
+  background-color: #c297c2;
+  width: 600px;
+}
+
+.choose-text {
+  font-size: 28px;
+  margin-top: 60px;
+  background-color: #c297c2;
+  width: 270px;
+}
+
+/* Results Page Layout */
+
+.results-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: lavender;
+  width: 1300px;
+}
+
+.shoot {
+  text-align: center;
+  font-size: 48px;
+  background-color: #c297c2;
+  width: 250px;
+  height: 60px;
+  margin-top: 100px;
+}
+
+.result-text {
+  text-align: center;
+  font-size: 24px;
+  background-color: #c297c2;
+  width: 250px;
+  height: 60px;
+  margin-top: 100px;
+}
+
+.choices-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+  height: 200px;
+  width: 1000px;
+}
+
+.player-choice {
+  font-size: 120px;
+  background-color: thistle;
+  height: 150px;
+  width: 250px;
+}
+
+/* Player Data */
+
 .icon {
   font-size: 40px;
   margin-top: -300px;
@@ -50,19 +112,7 @@
   width: 130px;
 }
 
-.game-title {
-  font-size: 44px;
-  margin-top: 60px;
-  background-color: #c297c2;
-  width: 600px;
-}
-
-.choose-text {
-  font-size: 28px;
-  margin-top: 60px;
-  width: 270px;
-  background-color: #c297c2;
-}
+/* Buttons */
 
 .choices {
   display: flex;
@@ -81,4 +131,10 @@ section.choices > p {
 
 section.choices > p:hover {
   background-color: #c297c2;
+}
+
+/* Hidden Property */
+
+.hidden {
+  display: none;
 }
