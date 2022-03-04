@@ -68,7 +68,11 @@ letsPlay.addEventListener("click", function() {
   loginHard();
 });
 
-window.addEventListener("load", renderPlayerData);
+window.addEventListener("load", function() {
+  renderPlayerData();
+  humanScore.innerText = `Wins: ${currentGame.players[0].wins}`;
+  compScore.innerText = `Wins: ${currentGame.players[1].wins}`;
+});
 
 // FUNCTIONS
 

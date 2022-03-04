@@ -2,16 +2,18 @@ class Game {
   constructor () {
     this.gameType = "normal";
     this.playerChoices = [];
-    this.players = [new Player("Human", "🧍"), new Player("AI", "👾")];
+    this.players = [new Player("Human", "🧍", parseInt(localStorage.getItem('human-score'))), new Player("AI", "👾", parseInt(localStorage.getItem('comp-score')))];
   };
 
   changeHumanScore() {
     this.players[0].wins += 1;
+    localStorage.setItem('human-score', `${this.players[0].wins}`)
     renderScore();
   };
 
   changeCompScore() {
     this.players[1].wins += 1;
+    localStorage.setItem('comp-score', `${this.players[1].wins}`)
     renderScore();
   };
 
