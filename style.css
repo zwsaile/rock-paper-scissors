@@ -7,7 +7,7 @@
 
 /* Login Page Layout */
 
-.login-page {
+.login {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,31 +16,36 @@
   width: 76%;
 }
 
-.login-title {
+.login__title {
   font-size: 44px;
   margin-top: 60px;
   background-color: #c297c2;
   width: 600px;
 }
 
-.login-form {
+.login__form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 
-.form-name {
+.login__form-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  height: 100px;
+  height: 300px;
+  margin-bottom: 60px;
 }
 
-.form-difficulty {
+.login__form-difficulty {
   height: 60px;
+  padding-left: 100px;
 }
 
-#name {
+.player-info {
   background-color: thistle;
   font-size: 18px;
   font-family: inherit;
@@ -66,8 +71,8 @@ label {
 }
 
 a {
-  margin-top: 30px;
-  padding-left: 10px;
+  margin-top: 10px;
+  padding-left: 100px;
 }
 
 .submit-button {
@@ -75,7 +80,8 @@ a {
   font-size: 28px;
   height: 40px;
   width: 250px;
-  margin-left: 150px;
+  margin-top: -40px;
+  margin-left: 40px;
   padding-top: 10px;
   box-shadow:
     -2px 2px 8px rgba(176, 168, 189),
@@ -89,7 +95,7 @@ a {
 
 /* Main Page Layout */
 
-.main-page {
+.main {
   display: flex;
   justify-content: space-between;
   height: 100vh;
@@ -187,21 +193,21 @@ a {
 
 /* Player Data */
 
-.icon {
+.side-section__icon {
   font-size: 40px;
   margin-top: -300px;
   background-color: #c297c2;
   width: 50px;
 }
 
-.name {
+.side-section__name {
   margin-top: -900px;
   font-size: 30px;
   background-color: #c297c2;
   width: 150px;
 }
 
-.score-count {
+.side-section__score-count {
   margin-top: -900px;
   font-size: 24px;
   font-weight: bold;

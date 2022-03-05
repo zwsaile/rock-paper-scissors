@@ -4,8 +4,9 @@ var currentGame = new Game;
 
 // Login page
 
-var letsPlay = document.querySelector(".submit-button");
+var letsPlayButton = document.querySelector(".submit-button");
 var nameValue = document.getElementById("name");
+var iconValue = document.getElementById("icon");
 var normalCheck = document.getElementById("normal");
 var hardCheck = document.getElementById("hard");
 
@@ -29,7 +30,7 @@ var compName = document.getElementById("comp-name");
 var compScore = document.getElementById("comp-score");
 
 //Page Views
-var loginPage = document.querySelector(".login-page")
+var loginPage = document.querySelector(".login")
 var normalPage = document.querySelector(".normal-page");
 var hardPage = document.querySelector(".hard-page");
 var resultsPage = document.querySelector(".results-page");
@@ -63,7 +64,7 @@ hardCheck.addEventListener("click", function() {
   hardCheck.classList.toggle("checked")
 });
 
-letsPlay.addEventListener("click", function() {
+letsPlayButton.addEventListener("click", function() {
   loginNormal();
   loginHard();
 });
@@ -83,6 +84,7 @@ function getRandomItem(items) {
 function loginNormal() {
   if (normalCheck.className === "checked") {
     humanName.innerText = nameValue.value;
+    humanIcon.innerText = iconValue.value;
     switchViews(loginPage)
     switchViews(normalPage)
   };
@@ -91,6 +93,7 @@ function loginNormal() {
 function loginHard() {
   if (hardCheck.className === "checked") {
     humanName.innerText = nameValue.value;
+    humanIcon.innerText = iconValue.value;
     switchViews(loginPage)
     switchViews(hardPage)
   };
