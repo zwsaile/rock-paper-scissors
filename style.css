@@ -151,7 +151,7 @@ a {
   flex-direction: column;
   align-items: center;
   background: lavender;
-  width: 1300px;
+  width: 76%;
 }
 
 .shoot {
@@ -226,7 +226,7 @@ a {
   padding-top: 200px;
 }
 
-section.choices > p {
+section.choices > div {
   width: 130px;
   height: 130px;
   background-color: thistle;
@@ -236,7 +236,7 @@ section.choices > p {
     0px 0px 20px rgba(176, 168, 189);
 }
 
-section.choices > p:hover {
+section.choices > div:hover {
   background-color: #c297c2;
 }
 
