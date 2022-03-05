@@ -57,7 +57,7 @@ There is also a *Hard* mode, which involves 5 possible choices, including *Lizar
 
 5. You will automatically be brought back to the page where you can choose an item
 
-6. If you want to choose a new difficulty, press refresh and re-enter your name and difficulty selection
+6. If you want to choose a new difficulty, press refresh and re-enter your name, icon, and difficulty selection.
 
 ## Deploy Link
 
