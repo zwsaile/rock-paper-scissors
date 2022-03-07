@@ -3,14 +3,13 @@ var currentGame = new Game;
 // QUERY SELECTORS AND GET ELEMENTS
 
 // Login page
-
 var letsPlayButton = document.querySelector(".submit-button");
 var nameValue = document.getElementById("name");
 var iconValue = document.getElementById("icon");
 var normalCheck = document.getElementById("normal");
 var hardCheck = document.getElementById("hard");
 
-//Game Pieces
+//Buttons and Containers
 var choiceBoxNormal = document.getElementById("normal-choices");
 var choiceBoxHard = document.getElementById("hard-choices");
 var rockButton = document.querySelector(".rock");
@@ -18,6 +17,8 @@ var paperButton = document.querySelector(".paper");
 var scissorsButton = document.querySelector(".scissors");
 var lizardButton = document.querySelector(".lizard");
 var spockButton = document.querySelector(".spock");
+var clearButton = document.getElementById("clear");
+var homeButton = document.getElementById("home");
 
 //Human Data
 var humanIcon = document.getElementById("human-icon");
@@ -57,16 +58,36 @@ choiceBoxHard.addEventListener("click", function() {
 });
 
 normalCheck.addEventListener("click", function() {
-  normalCheck.classList.toggle("checked")
+  normalCheck.classList.toggle("checked");
+  hardCheck.className = " ";
 });
 
 hardCheck.addEventListener("click", function() {
-  hardCheck.classList.toggle("checked")
+  hardCheck.classList.toggle("checked");
+  normalCheck.className = " ";
 });
 
 letsPlayButton.addEventListener("click", function() {
   loginNormal();
   loginHard();
+});
+
+clearButton.addEventListener("click", function() {
+  localStorage.clear();
+  currentGame.players[0].wins = 0;
+  currentGame.players[1].wins = 0;
+  humanScore.innerText = `Wins: ${currentGame.players[0].wins}`;
+  compScore.innerText = `Wins: ${currentGame.players[1].wins}`;
+});
+
+homeButton.addEventListener("click", function() {
+  if (!normalPage.className.includes("hidden")) {
+    switchViews(normalPage);
+    switchViews(loginPage);
+  } else if (!hardPage.className.includes("hidden")) {
+    switchViews(hardPage);
+    switchViews(loginPage);
+  };
 });
 
 window.addEventListener("load", function() {
@@ -85,8 +106,8 @@ function loginNormal() {
   if (normalCheck.className === "checked") {
     humanName.innerText = nameValue.value;
     humanIcon.innerText = iconValue.value;
-    switchViews(loginPage)
-    switchViews(normalPage)
+    switchViews(loginPage);
+    switchViews(normalPage);
   };
 };
 
@@ -94,8 +115,8 @@ function loginHard() {
   if (hardCheck.className === "checked") {
     humanName.innerText = nameValue.value;
     humanIcon.innerText = iconValue.value;
-    switchViews(loginPage)
-    switchViews(hardPage)
+    switchViews(loginPage);
+    switchViews(hardPage);
   };
 };
 

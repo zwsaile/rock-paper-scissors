@@ -7,13 +7,13 @@ class Game {
 
   changeHumanScore() {
     this.players[0].wins += 1;
-    localStorage.setItem('human-score', `${this.players[0].wins}`)
+    localStorage.setItem('human-score', `${this.players[0].wins}`);
     renderScore();
   };
 
   changeCompScore() {
     this.players[1].wins += 1;
-    localStorage.setItem('comp-score', `${this.players[1].wins}`)
+    localStorage.setItem('comp-score', `${this.players[1].wins}`);
     renderScore();
   };
 
@@ -49,15 +49,15 @@ class Game {
   convertResults() {
     for (var i = 0; i < 4; i++) {
       if (this.playerChoices[i] === "rock") {
-        this.playerChoices[i] = "🪨"
+        this.playerChoices[i] = "🪨";
       } else if (this.playerChoices[i] === "paper") {
-        this.playerChoices[i] = "📄"
+        this.playerChoices[i] = "📄";
       } else if (this.playerChoices[i] === "scissors") {
-        this.playerChoices[i] = "✂️"
+        this.playerChoices[i] = "✂️";
       } else if (this.playerChoices[i] === "lizard") {
-        this.playerChoices[i] = "🦎"
+        this.playerChoices[i] = "🦎";
       } else if (this.playerChoices[i] === "spock") {
-        this.playerChoices[i] = "🖖🏽"
+        this.playerChoices[i] = "🖖🏽";
       };
     };
   };
