@@ -30,19 +30,19 @@ There is also a *Hard* mode, which involves 5 possible choices, including *Lizar
 
 #### Here you can log in and select your difficulty
 
-![Login and Select Difficulty Page](assets/login-page-rps.png)
+![Login and Select Difficulty Page](/Users/zacharysaile/rock-paper-scissors/assets/login-page.png)
 
 #### Here you can play *Normal* made
 
-![Normal Mode](assets/normal-mode-rps.png)
+![Normal Mode](/Users/zacharysaile/rock-paper-scissors/assets/normal-page.png)
 
 #### Here you can play *Hard* Mode
 
-![Hard Mode](assets/hard-mode-rps.png)
+![Hard Mode](/Users/zacharysaile/rock-paper-scissors/assets/hard-page.png)
 
 ##### Here you can see both player choices and the updated score
 
-![Results Page](assets/results-page-rps.png)
+![Results Page](/Users/zacharysaile/rock-paper-scissors/assets/results-page.png)
 
 
 ## Instructions
