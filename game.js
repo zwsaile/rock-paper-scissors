@@ -1,6 +1,5 @@
 class Game {
   constructor () {
-    this.gameType = "normal";
     this.playerChoices = [];
     this.players = [new Player("Human", "🧍", parseInt(localStorage.getItem('human-score'))), new Player("AI", "👾", parseInt(localStorage.getItem('comp-score')))];
   };
